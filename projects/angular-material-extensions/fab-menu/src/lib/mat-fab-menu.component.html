@@ -1,6 +1,6 @@
 <div [fxLayout]="layout" class="container" fxLayoutAlign="center center" fxLayoutGap="16px">
   <div fxLayoutAlign="center">
-    <button (click)="isActive = !isActive"
+    <button aria-label="fab button" (click)="isActive = !isActive"
             [color]="color" [disabled]="disabled"
             type="button"
             [ngClass]="{
@@ -13,7 +13,7 @@
   </div>
   <div *ngIf="isActive" [@fabsStagger]="fabButtons.length"
        [fxLayout]="layout2" fxLayoutAlign="center center" fxLayoutGap="16px">
-    <button (click)="selectFabMenu(fab)"
+    <button aria-label="fab button" (click)="selectFabMenu(fab)"
             *ngFor="let fab of fabButtons"
             [color]="fab?.color"
             [matTooltip]="fab?.tooltip"
